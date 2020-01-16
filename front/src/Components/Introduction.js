@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-//import 'bootstrap/dist/css/bootstrap.min.css';
-
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol } from 'mdbreact';
-
-// import Image2 from './cuisine2.jpeg';
-// import Image3 from './cuisine3.png';
-// import logo from './exam.png'; 
 import Home from './Home';
-import Visite from './Visitez';
 import Photo from './Photo';
 import Navbar from './Navbar';
 import Footer from './Footer';

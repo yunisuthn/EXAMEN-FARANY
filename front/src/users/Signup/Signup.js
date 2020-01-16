@@ -1,11 +1,9 @@
 import React from 'react';
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import API from '../../utils/API';
-
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
-import Bienvenu from '../../Components/Bienvenu'
-import { MDBContainer, MDBRow, MDBCol } from 'mdbreact';
+import { MDBContainer, MDBCol } from 'mdbreact';
 
 export default class Signup extends React.Component {
     constructor(props) {

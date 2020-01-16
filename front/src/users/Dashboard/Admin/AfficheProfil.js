@@ -1,14 +1,9 @@
 import React from 'react';
-
 import axios from 'axios';
-
 import { Link } from 'react-router-dom';
-import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import TopNavigation from './TopNavigation';
 import SideNavigation from './SlideNavigation';
 import Footer from '../../../Components/Footer';
-
-import API from '../../../utils/API';
 
 export default class AfficheProfil extends React.Component {
 
@@ -17,34 +12,25 @@ export default class AfficheProfil extends React.Component {
         this.state = { profil: [] };
 
     }
+
     componentDidMount() {
         axios.get(`http://localhost:8081/userArticle/${localStorage.id}`)
             .then(response => {
-                console.log('user-article ==== ', response)
                 this.setState({ profil: response.data });
             })
             .catch(function (error) {
                 console.log(error);
             })
-
-
-
     }
-
 
     activer() {
         axios.post(`http://localhost:8081/activer/${localStorage.id}`)
             .then(response => {
-                
-                console.log('user-article ==== ', this.setState({ profil: response.data }))
                 this.setState({ profil: response.data });
             })
             .catch(function (error) {
                 console.log(error);
             })
-
-
-
     }
 
     ajout = event => {
@@ -54,13 +40,11 @@ export default class AfficheProfil extends React.Component {
     getInitialState = () => {
         return { checked: true }
     }
+
     handleCheck = (id) => {
-        //this.setState({checked: !this.state.checked});
-        console.log('checked == ', id);
-
         localStorage.setItem('checked', id);
-
     }
+
     liste() {
         var msg;
         if (this.state.checked) {
@@ -94,7 +78,7 @@ export default class AfficheProfil extends React.Component {
                             </td>
                             <td>
                            {
-                                (obj.affiche == true) ? (
+                                (obj.affiche === true) ? (
                                 <button 
                                 onClick={this.activer}>Activer</button>
                             ) : (
@@ -103,7 +87,6 @@ export default class AfficheProfil extends React.Component {
                                 )
                             }
                             </td>
-                            {console.log(obj)}
                         </tr>
 
                     })) : ('')
