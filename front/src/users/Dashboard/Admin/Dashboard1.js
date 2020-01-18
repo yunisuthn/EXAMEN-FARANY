@@ -31,7 +31,7 @@ export default class Dashboard extends React.Component {
                   </div>
                 </div>
                 <div className='row divD container span3 cher'>
-          <Footer />
+                    <Footer />
                 </div>
                 </div>
                 

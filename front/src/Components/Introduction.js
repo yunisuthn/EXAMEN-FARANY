@@ -9,7 +9,8 @@ class Introduction extends Component {
     render() {
         return (
 
-            <div class=" container-fluid " id='div'>
+            <div >
+            <div class=" container-fluid ">
                 <div class=" row ">
                     <Navbar />
                     <div class=" container ">
@@ -40,12 +41,12 @@ class Introduction extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
                     <div class=" container-fluid  " id='div'>
                         <Footer />
                     </div>
-                </div>
             </div>
-
 
         );
     }

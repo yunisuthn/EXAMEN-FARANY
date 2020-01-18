@@ -20,10 +20,9 @@ class Accueil extends Component {
                             </div>
                         </div>
                     </div>
-
-              <div class=" container-fluid  "  id='div'>
-                    <Footer />
                 </div>
+                <div class=" container-fluid  " id='div'>
+                    <Footer />
                 </div>
             </div>
         );
