@@ -1,15 +1,9 @@
-
 import React from 'react';
-
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
-
-import { MDBContainer, MDBRow, MDBCol } from 'mdbreact';
-
+import { MDBContainer} from 'mdbreact';
 import TopNavigation from './TopNavigation';
 import SideNavigation from './SlideNavigation';
-import API from '../../../utils/API';
 
-import Footer from '../../../Components/Footer';
 class PostFrontToBack extends React.Component {
 
   constructor(props) {
@@ -38,9 +32,7 @@ class PostFrontToBack extends React.Component {
   }
 
   handleUploadImage(ev) {
-
     ev.preventDefault();
-
     const data = new FormData();
     data.append('photo_profil', this.uploadInput.files[0]);
     data.append('titre', this.state.titre);
